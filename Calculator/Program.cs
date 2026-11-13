@@ -71,7 +71,12 @@ namespace Calculator
             {
                 try
                 {
-                    Console.WriteLine("Enter the your second number:");
+                    Console.Clear();
+                    Console.BackgroundColor = ConsoleColor.Blue;
+                    Console.WriteLine("First number:\t"+ num1);
+                    Console.WriteLine("Operator:\t"+ opSymb);
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    Console.WriteLine("\nEnter the your second number:\n"); 
                     float num2 = float.Parse(Console.ReadLine());
                     return num2;
                 }
@@ -87,9 +92,12 @@ namespace Calculator
             {
                 try
                 {
+                    Console.Clear();
+                    Console.BackgroundColor = ConsoleColor.Blue;
                     Console.WriteLine("First number:\t"+ num1); // prints the first number they input
-                    Console.WriteLine("Enter the number for the operator you would like to use:");
-                    Console.WriteLine(" 1. + \t 2. - \t 3. x \t 4. ÷ \t 5. % \t 6. ^");
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    Console.WriteLine("\nEnter the number for the operator you would like to use:");
+                    Console.WriteLine(" 1. + \t 2. - \t 3. x \t 4. ÷ \t 5. % \t 6. ^\n");
                     int op = int.Parse(Console.ReadLine());
                     if (op > 0 && op  < 7) { return  op; }
                     else { Invalid(); }
