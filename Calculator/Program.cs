@@ -71,11 +71,11 @@ namespace Calculator
             {
                 try
                 {
-                    Console.WriteLine("Enter the your first number:");
+                    Console.WriteLine("Enter the your second number:");
                     float num2 = float.Parse(Console.ReadLine());
                     return num2;
                 }
-                catch
+                catch 
                 {
                     Invalid();
                 }
