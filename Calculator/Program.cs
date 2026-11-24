@@ -39,6 +39,33 @@ namespace Calculator
                     break;
             } 
             float num2 = Number2(num1, opSymb);
+            Console.Clear();
+            
+            try
+            {
+                switch (operation)
+                {
+                    case 1:
+                        Console.WriteLine(num1 + " + " + num2 + " = " + (num1 + num2));
+                        break;
+                    case 2:
+                        Console.WriteLine(num1 + " - " + num2 + " = " + (num1 - num2));
+                        break;
+                    case 3:
+                        Console.WriteLine(num1 + " * " + num2 + " = " + (num1 * num2));
+                        break;
+                    case 4:
+                        Console.WriteLine(num1 + " ÷ " + num2 + " = " + (num1 / num2));
+                        break;
+                    case 5:
+                        Console.WriteLine(num1 + " % " + num2 + " = " + (num1 % num2));
+                        break;
+                    case 6:
+                        Console.WriteLine(num1 + " ^ " + num2 + " = " + ());
+
+                }
+            }
+            catch { Console.WriteLine("Lmao it broke"); }
         }
 
         static void Invalid() // generic invalid message
@@ -46,6 +73,7 @@ namespace Calculator
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Invalid Input. Please try again");
             Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Press any key:");
             Console.ReadKey();
             Console.Clear();
         } 
@@ -100,7 +128,7 @@ namespace Calculator
                     Console.WriteLine(" 1. + \t 2. - \t 3. x \t 4. ÷ \t 5. % \t 6. ^\n");
                     int op = int.Parse(Console.ReadLine());
                     if (op > 0 && op  < 7) { return  op; }
-                    else { Invalid(); }
+                    else { throw new Exception(); }
                 }
                 catch{ Invalid(); }
             }            
